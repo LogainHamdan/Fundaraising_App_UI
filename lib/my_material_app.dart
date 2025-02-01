@@ -1,3 +1,4 @@
+import 'package:Fundraising/screens/conversation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,25 +23,21 @@ class MyMaterialApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Go Fund Me',
           theme: ThemeData(
-            fontFamily: 'Poppines',
-            iconTheme: const IconThemeData(color: Color(0xffB2B2B2)),
-            textTheme: TextTheme(
-              bodySmall: TextStyle(
-                  color: const Color(0xffB2B2B2),
-                  fontSize: 12.sp,
-                  fontFamily: 'Poppines'),
-              bodyMedium: TextStyle(
-                fontFamily: 'Poppines',
-                color: const Color(0xff272727),
-                fontSize: 18.sp,
-              ),
+            // Use GoogleFonts.poppinsTextTheme to apply Poppins globally
+            textTheme: GoogleFonts.poppinsTextTheme(
+              Theme.of(context).textTheme,
             ),
+            iconTheme: const IconThemeData(color: Color(0xffB2B2B2)),
             appBarTheme: const AppBarTheme(backgroundColor: Color(0xffF7F6FF)),
             scaffoldBackgroundColor: kscaffoldBackgroundColor,
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
           ),
-          initialRoute: Chats.id,
-          routes: {Chats.id: (context) => Chats()},
+          initialRoute: Conversation.id,
+          routes: {
+            Chats.id: (context) => Chats(),
+            Home.id: (context) => Home(),
+            Conversation.id: (context) => Conversation()
+          },
         );
       },
     );

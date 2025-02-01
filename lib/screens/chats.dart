@@ -6,6 +6,7 @@ import '../core/util/constants.dart';
 import '../data/chats.dart';
 import '../widgets/custom_container.dart';
 import '../widgets/custom_row.dart';
+import 'conversation.dart';
 import 'home.dart';
 
 class Chats extends StatelessWidget {
@@ -28,6 +29,7 @@ class Chats extends StatelessWidget {
               child: Column(
                 children: [
                   CustomContainer(
+                    color: Colors.grey[400],
                     allBorderRaduis: false,
                     child: Column(
                       children: [
@@ -145,23 +147,28 @@ class Chats extends StatelessWidget {
                             child: ListView.separated(
                               itemBuilder: (context, index) {
                                 var chat = chats[index];
-                                return ListTile(
-                                  leading: CircleAvatar(
-                                    radius: 30.r,
-                                    backgroundImage: AssetImage(chat['image']!),
-                                  ),
-                                  title: Text(
-                                    chat['name']!,
-                                    style: TextStyle(
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: 'Poppines'),
-                                  ),
-                                  subtitle: Text(
-                                    chat['message']!,
-                                    style: TextStyle(
-                                        fontSize: 10.sp,
-                                        fontFamily: 'Poppines'),
+                                return GestureDetector(
+                                  onTap: () => Navigator.pushNamed(
+                                      context, Conversation.id),
+                                  child: ListTile(
+                                    leading: CircleAvatar(
+                                      radius: 30.r,
+                                      backgroundImage:
+                                          AssetImage(chat['image']!),
+                                    ),
+                                    title: Text(
+                                      chat['name']!,
+                                      style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppines'),
+                                    ),
+                                    subtitle: Text(
+                                      chat['message']!,
+                                      style: TextStyle(
+                                          fontSize: 10.sp,
+                                          fontFamily: 'Poppines'),
+                                    ),
                                   ),
                                 );
                               },

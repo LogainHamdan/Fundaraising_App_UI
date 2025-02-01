@@ -13,6 +13,7 @@ Color kgrdiantC1 = const Color(0xff6589FF);
 Color kgrdiantC2 = const Color(0xff003AFC); // same the primary color
 Color ksecondaryColor = const Color(0xff7C7C7C);
 Color kinBoxStatus = const Color(0xffFA3A57);
+Color purpleColor = Colors.purple[200]!;
 Color yellowColor = Color(0xffFFE120);
 Color kinProgressStatus = const Color(0xff6589FF);
 Color kcompletedStatus = const Color(0xff77D16F);
