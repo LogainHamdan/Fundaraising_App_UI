@@ -9,7 +9,6 @@ class AppLocalization extends StatelessWidget {
   Widget build(BuildContext context) {
     return EasyLocalization(
       path: 'assets/locals',
-      // startLocale: Locale('en'),
       supportedLocales: const [
         Locale('ar'),
         Locale('en'),

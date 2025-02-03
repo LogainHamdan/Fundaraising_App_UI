@@ -9,8 +9,8 @@ class DonationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      padding: EdgeInsets.all(16),
+      margin: EdgeInsets.symmetric(vertical: 10.h),
+      padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [blueColor, purpleColor]),
         borderRadius: BorderRadius.circular(16),
@@ -30,27 +30,27 @@ class DonationCard extends StatelessWidget {
           Text("VISA",
               style: GoogleFonts.poppins(
                   color: Colors.white,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.bold)),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Text("Total Donation",
-              style: GoogleFonts.poppins(color: Colors.white, fontSize: 14)),
+              style: GoogleFonts.poppins(color: Colors.white, fontSize: 14.sp)),
           Text("\$1,123.20",
               style: GoogleFonts.poppins(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold)),
           Align(
             alignment: Alignment.bottomRight,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
               child: Text("\$345 left",
-                  style:
-                      GoogleFonts.poppins(fontSize: 12, color: Colors.black)),
+                  style: GoogleFonts.poppins(
+                      fontSize: 12.sp, color: Colors.black)),
             ),
           ),
         ],
